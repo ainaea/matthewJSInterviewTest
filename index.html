@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Job Test</title>
+</head>
+<body>
+    
+
+
+    <script>
+         function first(num,content) {
+             var arr =[];
+             for (let i = 0; i < num; i++) {
+                 arr[i] = content;
+               
+             }
+             return arr;
+         }
+
+        // alert(first(6,'c'));
+
+        
+
+         function two(arr) {
+             var rightArr=[];
+             for (let i=0; i<arr.length; i++){
+                 arr[i]? rightArr[rightArr.length] = arr[i]: null;
+             }
+             return rightArr;
+         }
+       // alert(two( [0, 1, false, 2, undefined, '', 3, null]))
+
+
+
+        function three(arr1, arr2) {
+            var newArr=[];
+            for (let i=0; i<arr1.length; i++){
+                arr2.indexOf(arr1[i]) == -1? newArr[newArr.length] = arr1[i]: null;
+            }
+            return newArr;
+        }
+    //    alert(three([1, 2, 3, 1, 2],[1,2]));
+
+
+
+        function four(arr) {
+             var rightArr=[];
+            for (let i=0; i<arr.length; i++){
+                rightArr.indexOf(arr[i]) == -1 ? rightArr[rightArr.length] = arr[i]: null;
+            }
+            return rightArr;
+        }
+        // alert(four([1, 2, 3, 1, 2]));
+
+
+
+        function five(arr) {
+            var inArr = [...arr];
+            for (let i=0; i<inArr.length; i++){
+                // inArr[i] = arr[i];
+                while (typeof inArr[i] == typeof []){inArr=inArr.flat()};
+            }
+            
+            //inArr = inArr.flat().flat();
+            return inArr;
+        }
+
+        // console.log(five([1, 2, [3, 4, [5]]]));
+        // console.log(five([[1, 2], [3, 4, 5]]));
+
+
+
+        function six(arr, in2) {
+            var newArr=[];
+            for (let i=0; i<arr.length; i++){
+                var div =parseInt(i/in2), rem = i%in2;
+                rem==0? newArr[div]=[]: null; 
+                newArr[div][rem]= arr[i];
+            }
+            return newArr;
+        }
+        // console.log(six([1, 2, 3, 4, 5, 6, 7], 3))
+
+
+
+        function seven(arr) {
+            var newArr=[];
+            for (let i=0; i< arr.length; i++){
+                newArr[arr.length-i -1]= arr[i];
+            }
+            return newArr;
+        }
+        // alert(seven([1,2,5,3,4]));
+    </script>
+</body>
+</html>
